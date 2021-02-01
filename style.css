@@ -12,7 +12,7 @@ body {
   height: 100vh;
   color: #555;
 }
-
+/*BUTTON SECTION START*/
 .btn-new {
   top: 45px;
 }
@@ -25,6 +25,31 @@ body {
   top: 467px;
 }
 
+button:hover {
+  font-weight: 600;
+}
+
+button:hover i {
+  margin-right: 20px;
+}
+
+button:focus {
+  outline: none;
+}
+
+i {
+  color: #EB4D4D;
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 32px;
+  line-height: 1;
+  vertical-align: text-top;
+  margin-top: -4px;
+  transition: margin 0.3s;
+}
+/*BUTTON SECTION END*/
+
+/*DICE SECTION START*/
 .dice {
   position: absolute;
   left: 50%;
@@ -41,6 +66,8 @@ body {
 #dice2 {
   top: 250px;
 }
+/*DICE SECTION END*/
+
 
 clearfix::after {
   content: "";
@@ -48,10 +75,7 @@ clearfix::after {
   clear: both;
 }
 
-#winningScore:focus {
-  outline: none;
-}
-
+/*PLAYER SECTION START*/
 .player-1-panel,
 .player-2-panel {
   width: 50%;
@@ -95,6 +119,9 @@ clearfix::after {
   top: -7px;
   right: 10px;
 }
+/*PLAYER SECTION END*/
+
+/*WINNING SCORE SECTION START*/
 .winner {
   background-color: #f7f7f7;
 }
@@ -103,6 +130,7 @@ clearfix::after {
   font-weight: 300;
   color: #EB4D4D;
 }
+
 
 #winningScore {
   position: absolute;
@@ -117,3 +145,8 @@ clearfix::after {
   width:160;
   transform: translateX(-50%)
 }
+
+#winningScore:focus {
+  outline: none;
+}
+/*WINNING SCORE SECTION END*/
