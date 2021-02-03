@@ -13,3 +13,4 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
   document.getElementById('dice2').style.display = 'block';
   document.getElementById('dice1').src = 'dice-' + dice1 + '.png';
 })
+
