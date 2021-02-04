@@ -10,20 +10,18 @@
 </head>
 <body>
   <!--PLAYER 1 PANEL START-->
-    <div class="object_wrapper">
+    <div class="wrapper clearfix">
       <div class="player-1-panel">
         <div class="player-name" id="player-1">Player 1</div>
         <div class="player-score" id="score-1"></div>
         <div class="player-current-box">
           <div class="player-current-label">Current</div>
           <div class="player-current-score" id="current-1">0</div>
-        </div>
       </div>
-  </div>
+    </div>
  <!--PLAYER 1 PANEL END-->
 
  <!--PLAYER 2 PANEL START-->
-  <div class="object_wrapper">
     <div class="player-2-panel">
       <div class="player-name" id="player-2">Player 2</div>
       <div class="player-score" id="score-2"></div>
@@ -32,19 +30,20 @@
         <div class="player-current-score" id="current-2">0</div>
       </div>
     </div>
+  
   <!--PLAYER 2 PANEL END-->
 
   <!--BUTTONS-->
-    <button class="btn-new"><i class="ion-ios-plus-outline"></i>"New Game</button>
-    <button class="btn-roll"><i class="ion-ios-loop"></i>Roll Dice</button>
-    <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+      <button class="btn-new"><i class="ion-ios-plus-outline"></i>"New Game</button>
+      <button class="btn-roll"><i class="ion-ios-loop"></i>Roll Dice</button>
+      <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
 
-    <input type="text" id="winningScore" placeholder="Final Score">
+      <input type="text" id="winningScore" placeholder="Final Score">
   
   <!--DICE ASSETS-->
-    <img src="dice-5.png" alt="Dice" class="dice" id="dice1">
-    <img src="dice-5.png" alt="Dice" class="dice" id="dice2">
-  </div>  
+      <img src="dice-5.png" alt="Dice" class="dice" id="dice1">
+      <img src="dice-5.png" alt="Dice" class="dice" id="dice2">
+    </div>  
 
   <script src="app_script.js"></script>
   <script src="action-logic.js"></script>
