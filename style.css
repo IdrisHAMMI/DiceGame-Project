@@ -3,7 +3,7 @@
 }
 
 body {
-  background: linear-gradient(#c5775f,#b38242);
+  background: content-box radial-gradient(crimson, skyblue);
   font-family: Lato;
   font-weight: 300;
 }
