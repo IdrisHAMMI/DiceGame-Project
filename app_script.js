@@ -2,18 +2,21 @@ var scores, roundScore, activePlayer, prevDiceRoll, gamePlaying;
 
 int();
 
+// DICE ROLL EVENT LISTENER 
 document.querySelector('.btn-roll').addEventListener('click', function () {
 
+// GAME PLAYING CHECK
   if (gamePlaying) {
     var dice1 = Math.floor(Math.random() * 6) + 1;
     var dice2 = Math.floor(Math.random() * 6) + 1;
-  }
-
+  
+//DISPLAY SCORE
   document.getElementById('dice1').style.display = 'block';
   document.getElementById('dice2').style.display = 'block';
   document.getElementById('dice1').src = 'dice-' + dice1 + '.png';
   document.getElementById('dice2').src = 'dice-' + dice2 + '.png';
 
+//CHECKING IF PLAYER ROLLS 6 TWICE IN A ROW
   if(dice1 === 6 && prevDiceRoll === 6) {
     scores[activePlayer] = 0;
     document.querySelector('#score-' + activePlayer).textContent = '0';
@@ -24,5 +27,47 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
   } else {
       nextPlayer();
   }
+
+    prevDiceRoll = dice1;
+  }
+
 })
 
+//FUNCTION TO ACCUMULATE POINTS ON THE HOLD BUTTON
+document.querySelector('btn-hold').addEventListener('click', function (){
+
+  
+  if (gamePlaying) {
+    
+    scores[activePlayer] += roundScore;
+
+    document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+
+    var input = document.getElementById('winningScore').value;
+    var winningScore;
+
+    if(input) {
+      winningScore = input;
+    } else {
+      winningScore = 100;
+    }
+
+    if(scores[activePlayer >= winningScore]) {
+
+      document.querySelector('#name-' + activePlayer).textContent = 'You win! Try again by pressing the "New Game" button!';
+
+      document.getElementById('dice1').style.display = 'none';
+      document.getElementById('dice2').style.display = 'none';
+
+      document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
+
+      document.querySelector('.player-' + activePlayer + '-pannel').classList.remove('active');
+    
+      gamePlaying = false;
+
+    } else {
+
+      nextPlayer();
+    }
+  }
+})
