@@ -3,7 +3,7 @@
 }
 
 body {
-  background: content-box radial-gradient(crimson, skyblue);
+  background:  radial-gradient(crimson, skyblue);
   font-family: Lato;
   font-weight: 300;
 }
@@ -97,8 +97,8 @@ i {
 /*DICE SECTION END*/
 
 /*PLAYER SECTION START*/
-.player-1-panel,
-.player-2-panel {
+.player-0-panel,
+.player-1-panel {
   width: 50%;
   float: left;
   height: 600px;
