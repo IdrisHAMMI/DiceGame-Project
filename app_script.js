@@ -33,8 +33,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
 });
 
 //FUNCTION TO ACCUMULATE POINTS ON THE HOLD BUTTON
-document.querySelector('btn-hold').addEventListener('click', function (){
-
+document.querySelector('.btn-hold').addEventListener('click', function () {
   
   if (gamePlaying) {
     
@@ -71,7 +70,7 @@ document.querySelector('btn-hold').addEventListener('click', function (){
   }
 });
 
-document.querySelector('btn-new').addEventListener('click', init);
+document.querySelector('.btn-new').addEventListener('click', init);
 
 //GAME INIT
 function init() {
@@ -114,9 +113,9 @@ function nextPlayer() {
   document.getElementById('current-0').textContent = '0';
   document.getElementById('current-1').textContent = '0';
 
-  document.querySelector('player-0-panel').classList.toggle('active');
-  document.querySelector('player-1-panel').classList.toggle('active');
+  document.querySelector('.player-0-panel').classList.toggle('active');
+  document.querySelector('.player-1-panel').classList.toggle('active');
 
   document.getElementById('dice1').style.display = 'none';
-  document.getElementById('dice2').style.display = 'none;'
+  document.getElementById('dice2').style.display = 'none';
 }
