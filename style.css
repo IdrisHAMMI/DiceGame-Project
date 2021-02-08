@@ -1,18 +1,46 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background: linear-gradient(#c5775f,#b38242);
+  background:  radial-gradient(crimson, skyblue);
   font-family: Lato;
   font-weight: 300;
-  position: relative;
-  height: 100vh;
-  color: #555;
 }
+
+.wrapper {
+  width: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+}
+
+clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /*BUTTON SECTION START*/
+button {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #555;
+  background: none;
+  border: none;
+  font-family: Lato;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 300;
+  transition: background-color 0.3s, color 0.3s;
+}
+
 .btn-new {
   top: 45px;
 }
@@ -60,7 +88,7 @@ i {
 }
 
 #dice1 {
-  top: 120;
+  top: 120px;
 }
 
 #dice2 {
@@ -68,16 +96,9 @@ i {
 }
 /*DICE SECTION END*/
 
-
-clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /*PLAYER SECTION START*/
-.player-1-panel,
-.player-2-panel {
+.player-0-panel,
+.player-1-panel {
   width: 50%;
   float: left;
   height: 600px;
@@ -95,7 +116,7 @@ clearfix::after {
   position: relative;
 }
 
-.playerscore {
+.player-score {
   text-align: center;
   font-size: 80px;
   font-weight: 100;
@@ -118,6 +139,26 @@ clearfix::after {
   color: #EB4D4D;
   top: -7px;
   right: 10px;
+}
+
+.player-current-box {
+  background-color: #EB4D4D;
+  color: #fff;
+  width: 40%;
+  margin: 0 auto;
+  padding: 12px;
+  text-align: center;
+}
+
+.player-current-label {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #222;
+}
+
+.player-current-score {
+  font-size: 30px;
 }
 /*PLAYER SECTION END*/
 
