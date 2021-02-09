@@ -53,7 +53,7 @@ document.querySelector('.btn-hold').addEventListener('click', function (){
 
     if(scores[activePlayer] >= winningScore) {
 
-      document.querySelector('#name-' + activePlayer).textContent = 'You won!';
+      document.querySelector('#name-' + activePlayer).textContent = ('You win!');
       
       document.getElementById('dice1').style.display = 'none';
       document.getElementById('dice2').style.display = 'none';
