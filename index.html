@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
   <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="asset/favicon.ico" type="img/x-icon" />
   <link type="text/css" rel="stylesheet" href="style.css">
-  <title>Jeu de </title>
+  <title>DICE GAME!</title>
 </head>
 <body>
   <!--PLAYER 1 PANEL START-->
     <div class="wrapper clearfix">
       <div class="player-0-panel active">
         <div class="player-name" id="name-0">Player 1</div>
-        <div class="player-score" id="score-0"></div>
+        <div class="player-score" id="score-0">0</div>
         <div class="player-current-box">
           <div class="player-current-label">Current</div>
           <div class="player-current-score" id="current-0">0</div>
@@ -24,7 +25,7 @@
  <!--PLAYER 2 PANEL START-->
     <div class="player-1-panel">
       <div class="player-name" id="name-1">Player 2</div>
-      <div class="player-score" id="score-1"></div>
+      <div class="player-score" id="score-1">0</div>
       <div class="player-current-box">
         <div class="player-current-label">Current</div>
         <div class="player-current-score" id="current-1">0</div>
@@ -44,7 +45,10 @@
       <img src="dice-5.png" alt="Dice" class="dice" id="dice1">
       <img src="dice-5.png" alt="Dice" class="dice" id="dice2">
     </div>
-    
+
   <script src="app_script.js"></script>
+
+  <audio src="asset/theme.wav" loop="loop" autoplay="autoplay"></audio>
+
 </body>
 </html>
