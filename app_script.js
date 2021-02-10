@@ -33,7 +33,8 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
 });
 
 //FUNCTION TO ACCUMULATE POINTS ON THE HOLD BUTTON
-document.querySelector('.btn-hold').addEventListener('click', function () {
+document.querySelector('.btn-hold').addEventListener('click', function (){
+
   
   if (gamePlaying) {
     
@@ -50,10 +51,10 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
       winningScore = 100;
     }
 
-    if(scores[activePlayer >= winningScore]) {
+    if(scores[activePlayer] >= winningScore) {
 
-      document.querySelector('#name-' + activePlayer).textContent = 'You win !';
-
+      document.querySelector('#name-' + activePlayer).textContent = ('You win!');
+      
       document.getElementById('dice1').style.display = 'none';
       document.getElementById('dice2').style.display = 'none';
 
@@ -119,3 +120,4 @@ function nextPlayer() {
   document.getElementById('dice1').style.display = 'none';
   document.getElementById('dice2').style.display = 'none';
 }
+
